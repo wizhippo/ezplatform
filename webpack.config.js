@@ -13,8 +13,9 @@ Encore.setOutputPath('public/assets/build')
     .enableSingleRuntimeChunk();
 
 // Put your config here.
-Encore.addEntry('app_default', [
-    path.resolve(__dirname, './assets/scss/welcome-page.scss'),
+Encore.addEntry('app', [
+    path.resolve(__dirname, './assets/js/app.js'),
+    path.resolve(__dirname, './assets/scss/app.scss'),
 ]);
 
 const projectConfig = Encore.getWebpackConfig();

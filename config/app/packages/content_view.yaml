@@ -1,0 +1,16 @@
+ezpublish:
+    system:
+        frontend_group:
+            content_view:
+                full:
+                    welcome_page:
+                        template: "@ezdesign/content/full/welcome_page.html.twig"
+                        match:
+                            Id\Location: 2
+                        params:
+                            project_dir: '%kernel.project_dir%'
+                standard:
+                    article:
+                        template: "@ezdesign/content/standard/article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]

@@ -1,0 +1,13 @@
+{% extends nglayouts.layoutTemplate %}
+
+{% trans_default_domain 'app_errors' %}
+
+{% set site_title = 'app.errors.default.title'|trans %}
+
+{% block content %}
+    <div class="site-error">
+        <h1>{{ 'app.errors.default.title'|trans }}</h1>
+
+        <div>{{ 'app.errors.default.message'|trans }}</div>
+    </div>
+{% endblock %}

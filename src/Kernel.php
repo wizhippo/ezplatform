@@ -36,6 +36,10 @@ class Kernel extends BaseKernel
         $loader->load($confDir.'/{packages}/'.$this->environment.'/**/*'.self::CONFIG_EXTS, 'glob');
         $loader->load($confDir.'/{services}'.self::CONFIG_EXTS, 'glob');
         $loader->load($confDir.'/{services}_'.$this->environment.self::CONFIG_EXTS, 'glob');
+
+        $loader->load($confDir . '/app/{packages}/*' . self::CONFIG_EXTS, 'glob');
+        $loader->load($confDir . '/app/{services}/*' . self::CONFIG_EXTS, 'glob');
+        $loader->load($confDir . '/app/{services}' . self::CONFIG_EXTS, 'glob');
     }
 
     protected function configureRoutes(RouteCollectionBuilder $routes): void
@@ -45,5 +49,8 @@ class Kernel extends BaseKernel
         $routes->import($confDir.'/{routes}/'.$this->environment.'/**/*'.self::CONFIG_EXTS, '/', 'glob');
         $routes->import($confDir.'/{routes}/*'.self::CONFIG_EXTS, '/', 'glob');
         $routes->import($confDir.'/{routes}'.self::CONFIG_EXTS, '/', 'glob');
+
+        $routes->import($confDir . '/app/{routes}/*' . self::CONFIG_EXTS, '/', 'glob');
+        $routes->import($confDir . '/app/{routes}' . self::CONFIG_EXTS, '/', 'glob');
     }
 }

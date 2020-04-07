@@ -1,0 +1,6 @@
+ezpublish:
+    system:
+        frontend_group:
+            page_layout: "@ezdesign/pagelayout.html.twig"
+            user:
+                login_template: "@ezdesign/Security/login.html.twig"

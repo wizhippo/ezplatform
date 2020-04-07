@@ -1,0 +1,5 @@
+parameters:
+    app.default.template.errors.403: "@@ezdesign/errors/403.html.twig"
+    app.default.template.errors.404: "@@ezdesign/errors/404.html.twig"
+    app.default.template.errors.500: "@@ezdesign/errors/500.html.twig"
+    app.default.template.errors.default: "@@ezdesign/errors/default.html.twig"

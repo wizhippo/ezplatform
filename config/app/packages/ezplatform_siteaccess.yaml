@@ -1,0 +1,41 @@
+ezpublish:
+    siteaccess:
+        default_siteaccess: eng
+        list:
+            - eng
+            - admin
+        groups:
+            frontend_group:
+                - eng
+            admin_group:
+                - admin
+    system:
+        frontend_group:
+            translation_siteaccesses:
+                - eng
+        eng:
+            design: app
+            languages:
+                - eng-GB
+            session:
+                name: eZSESSID
+        admin:
+            languages:
+                - eng-GB
+            session:
+                name: eZSESSID
+netgen_layouts:
+    design_list:
+        app:
+            - app
+    system:
+        frontend_group:
+            design: app
+ezdesign:
+    design_list:
+        app:
+            - app
+            - standard
+        admin:
+            - admin
+            - standard

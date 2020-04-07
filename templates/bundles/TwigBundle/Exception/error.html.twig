@@ -1,0 +1,4 @@
+{% include ezplatform.configResolver.hasParameter('template.errors.' ~ status_code, 'app') ?
+    ezplatform.configResolver.getParameter('template.errors.' ~ status_code, 'app') :
+    ezplatform.configResolver.getParameter('template.errors.default', 'app')
+    ignore missing %}
